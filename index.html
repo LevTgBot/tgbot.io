@@ -108,12 +108,12 @@
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
             if(email.lenght < 10) {
-                document.getElementById("user_email").InnerText = "Такой почты не существует!"
-                return
+                document.getElementById("user_email").InnerText = "Такой почты не существует!";
+                return;
             }
             if(phone.lenght < 8) {
-                document.getElementById("user_phone").InnerText = "Такого номера телефона не существует!"
-                return
+                document.getElementById("user_phone").InnerText = "Такого номера телефона не существует!";
+                return;
             }
 
             let data = {
