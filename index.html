@@ -100,11 +100,30 @@
         buy.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
 
         order.addEventListener("click", () => {
-            tg.close();
+            document.getElementById("user_email", "user_phone").innerText = '';
+            let name = document.getElementById("user_name").value;
+            let email = document.getElementById("user_email").value;
+            let phone = document.getElementById("user_phone").value;
+            if(email.lenght < 10) {
+                document.getElementById("user_email").InnerText = "Такой почты не существует!"
+                return
+            }
+            if(phone.lenght < 8) {
+                document.getElementById("user_phone").InnerText = "Такого номера телефона не существует!"
+                return
+            }
+
+            let data = {
+                name: name,
+                email: email,
+                phone: phone
+            }    
+            tg.sendData(JSON.stringify(data))
+
+            tg.close()
         });
 
     </script>
