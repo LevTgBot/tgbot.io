@@ -116,15 +116,15 @@
                 document.getElementById("error").InnerText = "Такого номера телефона не существует!";
                 return;
             }
-
-            let data = {
+            else{
+                let data = {
                 name: name,
                 email: email,
                 phone: phone
-            }    
-            tg.sendData(JSON.stringify(data))
-
-            tg.close()
+                }    
+                tg.sendData(JSON.stringify(data))
+                tg.close()
+            }
         });
 
     </script>
