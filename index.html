@@ -120,15 +120,17 @@
                 document.getElementById("error").innerText = "Такого номера телефона не существует!";
                 return;
             }
+            else{
             
-            let data = {
-            name: name,
-            email: email,
-            phone: phone
-            }    
-            tg.sendData(JSON.stringify(data))
+                let data = {
+                name: name,
+                email: email,
+                phone: phone
+                }    
+                tg.sendData(JSON.stringify(data))
             
-            tg.close()
+                tg.close()
+            }
         });
 
     </script>
