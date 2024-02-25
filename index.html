@@ -109,11 +109,11 @@
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
             if(email.length < 10) {
-                document.getElementById("error").InnerText = "Такой почты не существует!";
+                document.getElementById("error").innerText = "Такой почты не существует!";
                 return;
             }
             if(phone.length < 8) {
-                document.getElementById("error").InnerText = "Такого номера телефона не существует!";
+                document.getElementById("error").innerText = "Такого номера телефона не существует!";
                 return;
             }
             else{
