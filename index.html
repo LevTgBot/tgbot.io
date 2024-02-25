@@ -88,6 +88,7 @@
         <input type="text" placeholder="Имя" id="user_name">
         <input type="text" placeholder="Почта" id="user_email">
         <input type="text" placeholder="Телефон" id="user_phone">
+        <div id="error"></div>
         <button id="order">Оформить</button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -107,12 +108,12 @@
             let name = document.getElementById("user_name").value;
             let email = document.getElementById("user_email").value;
             let phone = document.getElementById("user_phone").value;
-            if(email.lenght < 10) {
-                document.getElementById("user_email").InnerText = "Такой почты не существует!";
+            if(email.length < 10) {
+                document.getElementById("error").InnerText = "Такой почты не существует!";
                 return;
             }
-            if(phone.lenght < 8) {
-                document.getElementById("user_phone").InnerText = "Такого номера телефона не существует!";
+            if(phone.length < 8) {
+                document.getElementById("error").InnerText = "Такого номера телефона не существует!";
                 return;
             }
 
