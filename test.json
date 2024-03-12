@@ -1,1 +1,5 @@
-asd: dsa
+{
+  "style":{
+    "lox":"off"
+  }
+}
